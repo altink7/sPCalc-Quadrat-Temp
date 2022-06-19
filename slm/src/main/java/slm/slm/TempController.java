@@ -10,7 +10,7 @@ package slm.slm;
 public class TempController {
 
     @GetMapping("/{value}")
-    public String quadrat(@PathVariable float value){
+    public String temp(@PathVariable float value){
         return String.format("%1.1f",(value-32)*5/9);
     }
 }
