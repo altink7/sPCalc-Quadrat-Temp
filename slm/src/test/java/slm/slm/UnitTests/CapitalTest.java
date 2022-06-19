@@ -13,6 +13,8 @@ public class CapitalTest {
         String actual= controller.capital("Austria");
         String excepted ="Vienna";
 
+
+
         Assert.assertEquals(actual,excepted,"should be Vienna!");
     }
 }
