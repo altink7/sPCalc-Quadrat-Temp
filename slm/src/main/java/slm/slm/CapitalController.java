@@ -18,6 +18,8 @@ public class CapitalController {
             new Country("Bern", "Switzerland"),
             new Country("Amsterdam", "Netherlands")};
 
+
+
     @GetMapping("/{land}")
     public String capital(@PathVariable String land){
         CountryList.add(liste);
@@ -30,4 +32,5 @@ public class CapitalController {
         }
         return match;
     }
+
 }
