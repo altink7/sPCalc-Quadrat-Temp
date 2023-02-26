@@ -3,6 +3,5 @@ RESTapi FW Software-Lifecycle-Management
 
 XML files und PDF's werden generiert:
 
-Bsp:
+Bsp: [output.pdf](https://github.com/altink7/sPCalc-Quadrat-Temp/files/10834205/output.pdf)
 
-[output.pdf](https://github.com/altink7/sPCalc-Quadrat-Temp/files/10834205/output.pdf)
