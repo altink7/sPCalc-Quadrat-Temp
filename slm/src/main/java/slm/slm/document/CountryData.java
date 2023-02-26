@@ -6,7 +6,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.time.LocalDate;
 
-@XmlRootElement
+@XmlRootElement(name = "countryData")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class CountryData extends AbstractData<String> {
     @XmlElement
