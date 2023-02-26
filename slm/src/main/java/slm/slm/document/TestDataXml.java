@@ -23,11 +23,15 @@ public class TestDataXml {
             Marshaller marshaller = context.createMarshaller();
             marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
 
-            // Save the XML to a file
+            // Saved the XML to a file
             File file = new File("testdata.xml");
             marshaller.marshal(data, file);
 
-            // Print the XML to the console
+            // Saved the XML to a file in the same directory as the class file
+            File xmlFile = new File(TestDataXml.class.getResource("").getPath() + "testdata.xml");
+            marshaller.marshal(data, xmlFile);
+
+            // Printed the XML to the console
             marshaller.marshal(data, System.out);
         } catch (JAXBException e) {
             e.printStackTrace();

@@ -1,12 +1,17 @@
 package slm.slm.document;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.time.LocalDate;
 
 @XmlRootElement
+@XmlAccessorType(XmlAccessType.FIELD)
 public class CountryData extends AbstractData<String> {
+    @XmlElement
     private String country;
+    @XmlElement
     private String capitalCity;
 
     public CountryData() {
@@ -19,7 +24,6 @@ public class CountryData extends AbstractData<String> {
         this.capitalCity = capitalCity;
     }
 
-    @XmlElement
     public String getCountry() {
         return country;
     }
@@ -28,7 +32,6 @@ public class CountryData extends AbstractData<String> {
         this.country = country;
     }
 
-    @XmlElement
     public String getCapitalCity() {
         return capitalCity;
     }
