@@ -1,53 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?><fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format">
 <fo:layout-master-set>
-<fo:simple-page-master master-name="A4">
+<fo:simple-page-master margin-right="2cm" margin-left="2cm" margin-bottom="2cm" margin-top="2cm" page-width="21.0cm" page-height="29.7cm" master-name="A4">
 <fo:region-body margin="2cm"/>
+<fo:region-after extent="1cm"/>
 </fo:simple-page-master>
 </fo:layout-master-set>
 <fo:page-sequence master-reference="A4">
+<fo:static-content flow-name="xsl-region-after">
+<fo:block text-align="center">
+<fo:inline font-size="12pt">Altin Kelmendi © 2023</fo:inline>
+</fo:block>
+</fo:static-content>
 <fo:flow flow-name="xsl-region-body">
-<fo:block>Country Data:</fo:block>
+<fo:block font-weight="bold" font-size="32pt" text-align="center">Country Data:</fo:block>
 <fo:table>
 <fo:table-column column-width="50%"/>
 <fo:table-column column-width="50%"/>
 <fo:table-body>
 <fo:table-row>
-<fo:table-cell padding="5pt" border="solid black 1px">
+<fo:table-cell padding="10pt" font-size="20pt" border="solid black 1px">
 <fo:block font-weight="bold">Application:</fo:block>
 </fo:table-cell>
-<fo:table-cell padding="5pt" border="solid black 1px">
+<fo:table-cell padding="10pt" font-size="20pt" border="solid black 1px">
 <fo:block>My Application</fo:block>
 </fo:table-cell>
 </fo:table-row>
 <fo:table-row>
-<fo:table-cell padding="5pt" border="solid black 1px">
+<fo:table-cell padding="10pt" font-size="20pt" border="solid black 1px">
 <fo:block font-weight="bold">Data:</fo:block>
 </fo:table-cell>
-<fo:table-cell padding="5pt" border="solid black 1px">
+<fo:table-cell padding="10pt" font-size="20pt" border="solid black 1px">
 <fo:block>Some data</fo:block>
 </fo:table-cell>
 </fo:table-row>
 <fo:table-row>
-<fo:table-cell padding="5pt" border="solid black 1px">
+<fo:table-cell padding="10pt" font-size="20pt" border="solid black 1px">
 <fo:block font-weight="bold">Date:</fo:block>
 </fo:table-cell>
-<fo:table-cell padding="5pt" border="solid black 1px">
+<fo:table-cell padding="10pt" font-size="20pt" border="solid black 1px">
 <fo:block>26-02-2023 17:24:00</fo:block>
 </fo:table-cell>
 </fo:table-row>
 <fo:table-row>
-<fo:table-cell padding="5pt" border="solid black 1px">
+<fo:table-cell padding="10pt" font-size="20pt" border="solid black 1px">
 <fo:block font-weight="bold">Country:</fo:block>
 </fo:table-cell>
-<fo:table-cell padding="5pt" border="solid black 1px">
+<fo:table-cell padding="10pt" font-size="20pt" border="solid black 1px">
 <fo:block>Canada</fo:block>
 </fo:table-cell>
 </fo:table-row>
 <fo:table-row>
-<fo:table-cell padding="5pt" border="solid black 1px">
+<fo:table-cell padding="10pt" font-size="20pt" border="solid black 1px">
 <fo:block font-weight="bold">Capital City:</fo:block>
 </fo:table-cell>
-<fo:table-cell padding="5pt" border="solid black 1px">
+<fo:table-cell padding="10pt" font-size="20pt" border="solid black 1px">
 <fo:block>Ottawa</fo:block>
 </fo:table-cell>
 </fo:table-row>
