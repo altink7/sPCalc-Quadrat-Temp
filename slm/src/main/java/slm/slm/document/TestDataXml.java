@@ -13,6 +13,6 @@ public class TestDataXml {
                 "Ottawa"
         );
 
-        XmlToPdfConverter.createXmlFileAndPdf(data,null,null);
+        XmlToPdfConverter.createXmlFileAndPdf(data,null,null,true);
     }
 }

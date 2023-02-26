@@ -3,6 +3,6 @@
     <application>Capital-Rest</application>
     <data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">Capital-Country</data>
     <date/>
-    <country>Germany</country>
-    <capitalCity>Berlin</capitalCity>
+    <country>France</country>
+    <capitalCity>Paris</capitalCity>
 </countryData>

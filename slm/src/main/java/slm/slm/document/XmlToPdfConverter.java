@@ -65,7 +65,7 @@ public class XmlToPdfConverter{
         }
     }
 
-    public static void createXmlFileAndPdf(CountryData data, HttpServletRequest request, HttpServletResponse response) {
+    public static void createXmlFileAndPdf(CountryData data, HttpServletRequest request, HttpServletResponse response, boolean createPdf) {
         try {
             // Create JAXB context and marshaller
             JAXBContext context = JAXBContext.newInstance(CountryData.class);
@@ -84,8 +84,9 @@ public class XmlToPdfConverter{
             marshaller.marshal(data, System.out);
 
             XmlToPdfConverter.xmlFile = xmlFile;
-
-            createPdf(xmlFile, request, response);
+            if(createPdf) {
+                createPdf(xmlFile, request, response);
+            }
         } catch (JAXBException e) {
             e.printStackTrace();
         } catch (IOException | TransformerException | SAXException e) {

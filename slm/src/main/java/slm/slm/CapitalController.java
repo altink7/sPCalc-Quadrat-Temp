@@ -12,7 +12,10 @@ import slm.slm.document.XmlToPdfConverter;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
 import java.time.LocalDate;
 
 @RestController
@@ -41,8 +44,8 @@ public class CapitalController {
         return match;
     }
 
-    @GetMapping("/{land}/pdf")
-    public String createPdfFromCountry(HttpServletRequest request, HttpServletResponse response, @PathVariable String land){
+    @GetMapping("/{land}/{format}")
+    public String createPdfFromCountry(HttpServletRequest request, HttpServletResponse response, @PathVariable String land, @PathVariable String format){
         CountryList.add(liste);
         Country country = null;
 
@@ -55,8 +58,26 @@ public class CapitalController {
             return "Country not found";
         }
         CountryData countryData = new CountryData("Capital-Rest", LocalDate.now(), "Capital-Country", country.getName(), country.getCapital());
-        XmlToPdfConverter.createXmlFileAndPdf(countryData, request, response);
-        return XmlToPdfConverter.xmlFile.toString();
+        if(format.matches("pdf")) {
+            XmlToPdfConverter.createXmlFileAndPdf(countryData, request, response,true);
+            return "PDF created";
+        }else if(format.matches("xml")){
+            XmlToPdfConverter.createXmlFileAndPdf(countryData, request, response,false);
+            return readXmlFile(XmlToPdfConverter.xmlFile);
+        }else{
+            return "Format not supported";
+        }
     }
-
+    public static String readXmlFile(File file){
+        try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
+            StringBuilder stringBuilder = new StringBuilder();
+            String line;
+            while ((line = reader.readLine()) != null) {
+                stringBuilder.append(line).append("\n");
+            }
+            return stringBuilder.toString();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
 }

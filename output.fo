@@ -46,7 +46,7 @@
 <fo:block font-weight="bold">Country:</fo:block>
 </fo:table-cell>
 <fo:table-cell padding="10pt" font-size="20pt" border="solid black 1px">
-<fo:block>Germany</fo:block>
+<fo:block>France</fo:block>
 </fo:table-cell>
 </fo:table-row>
 <fo:table-row>
@@ -54,7 +54,7 @@
 <fo:block font-weight="bold">Capital City:</fo:block>
 </fo:table-cell>
 <fo:table-cell padding="10pt" font-size="20pt" border="solid black 1px">
-<fo:block>Berlin</fo:block>
+<fo:block>Paris</fo:block>
 </fo:table-cell>
 </fo:table-row>
 </fo:table-body>
