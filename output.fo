@@ -1,1 +1,58 @@
-<?xml version="1.0" encoding="UTF-8"?><fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format"><fo:layout-master-set><fo:simple-page-master master-name="A4"><fo:region-body margin="2cm"/></fo:simple-page-master></fo:layout-master-set><fo:page-sequence master-reference="A4"><fo:flow flow-name="xsl-region-body"><fo:table border-collapse="collapse" width="100%" table-layout="fixed"><fo:table-column column-width="20%"/><fo:table-column column-width="20%"/><fo:table-column column-width="20%"/><fo:table-column column-width="20%"/><fo:table-column column-width="20%"/><fo:table-header><fo:table-row><fo:table-cell><fo:block font-weight="bold">Application</fo:block></fo:table-cell><fo:table-cell><fo:block font-weight="bold">Data</fo:block></fo:table-cell><fo:table-cell><fo:block font-weight="bold">Date</fo:block></fo:table-cell><fo:table-cell><fo:block font-weight="bold">Country</fo:block></fo:table-cell><fo:table-cell><fo:block font-weight="bold">Capital City</fo:block></fo:table-cell></fo:table-row></fo:table-header><fo:table-body><fo:table-row><fo:table-cell><fo:block/></fo:table-cell><fo:table-cell><fo:block/></fo:table-cell><fo:table-cell><fo:block/></fo:table-cell><fo:table-cell><fo:block/></fo:table-cell><fo:table-cell><fo:block/></fo:table-cell></fo:table-row></fo:table-body></fo:table></fo:flow></fo:page-sequence></fo:root>
+<?xml version="1.0" encoding="UTF-8"?><fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format">
+<fo:layout-master-set>
+<fo:simple-page-master master-name="A4">
+<fo:region-body margin="2cm"/>
+</fo:simple-page-master>
+</fo:layout-master-set>
+<fo:page-sequence master-reference="A4">
+<fo:flow flow-name="xsl-region-body">
+<fo:block>Country Data:</fo:block>
+<fo:table>
+<fo:table-column column-width="50%"/>
+<fo:table-column column-width="50%"/>
+<fo:table-body>
+<fo:table-row>
+<fo:table-cell padding="5pt" border="solid black 1px">
+<fo:block font-weight="bold">Application:</fo:block>
+</fo:table-cell>
+<fo:table-cell padding="5pt" border="solid black 1px">
+<fo:block>My Application</fo:block>
+</fo:table-cell>
+</fo:table-row>
+<fo:table-row>
+<fo:table-cell padding="5pt" border="solid black 1px">
+<fo:block font-weight="bold">Data:</fo:block>
+</fo:table-cell>
+<fo:table-cell padding="5pt" border="solid black 1px">
+<fo:block>Some data</fo:block>
+</fo:table-cell>
+</fo:table-row>
+<fo:table-row>
+<fo:table-cell padding="5pt" border="solid black 1px">
+<fo:block font-weight="bold">Date:</fo:block>
+</fo:table-cell>
+<fo:table-cell padding="5pt" border="solid black 1px">
+<fo:block/>
+</fo:table-cell>
+</fo:table-row>
+<fo:table-row>
+<fo:table-cell padding="5pt" border="solid black 1px">
+<fo:block font-weight="bold">Country:</fo:block>
+</fo:table-cell>
+<fo:table-cell padding="5pt" border="solid black 1px">
+<fo:block>Canada</fo:block>
+</fo:table-cell>
+</fo:table-row>
+<fo:table-row>
+<fo:table-cell padding="5pt" border="solid black 1px">
+<fo:block font-weight="bold">Capital City:</fo:block>
+</fo:table-cell>
+<fo:table-cell padding="5pt" border="solid black 1px">
+<fo:block>Ottawa</fo:block>
+</fo:table-cell>
+</fo:table-row>
+</fo:table-body>
+</fo:table>
+</fo:flow>
+</fo:page-sequence>
+</fo:root>

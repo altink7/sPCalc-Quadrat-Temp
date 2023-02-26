@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet version="1.1" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                 xmlns:fo="http://www.w3.org/1999/XSL/Format">
+    <xsl:output method="xml" indent="yes" encoding="UTF-8"/>
 
     <xsl:template match="/">
         <fo:root>
@@ -11,58 +11,57 @@
             </fo:layout-master-set>
             <fo:page-sequence master-reference="A4">
                 <fo:flow flow-name="xsl-region-body">
-                    <fo:table table-layout="fixed" width="100%" border-collapse="collapse">
-                        <fo:table-column column-width="20%"/>
-                        <fo:table-column column-width="20%"/>
-                        <fo:table-column column-width="20%"/>
-                        <fo:table-column column-width="20%"/>
-                        <fo:table-column column-width="20%"/>
-                        <fo:table-header>
+                    <fo:block>
+                        <xsl:text>Country Data:</xsl:text>
+                    </fo:block>
+                    <fo:table>
+                        <fo:table-column column-width="50%"/>
+                        <fo:table-column column-width="50%"/>
+                        <fo:table-body>
                             <fo:table-row>
-                                <fo:table-cell>
-                                    <fo:block font-weight="bold">Application</fo:block>
+                                <fo:table-cell border="solid black 1px" padding="5pt">
+                                    <fo:block font-weight="bold">Application:</fo:block>
                                 </fo:table-cell>
-                                <fo:table-cell>
-                                    <fo:block font-weight="bold">Data</fo:block>
-                                </fo:table-cell>
-                                <fo:table-cell>
-                                    <fo:block font-weight="bold">Date</fo:block>
-                                </fo:table-cell>
-                                <fo:table-cell>
-                                    <fo:block font-weight="bold">Country</fo:block>
-                                </fo:table-cell>
-                                <fo:table-cell>
-                                    <fo:block font-weight="bold">Capital City</fo:block>
+                                <fo:table-cell border="solid black 1px" padding="5pt">
+                                    <fo:block><xsl:value-of select="countryData/application"/></fo:block>
                                 </fo:table-cell>
                             </fo:table-row>
-                        </fo:table-header>
-                        <fo:table-body>
-                            <xsl:apply-templates select="countryData"/>
+                            <fo:table-row>
+                                <fo:table-cell border="solid black 1px" padding="5pt">
+                                    <fo:block font-weight="bold">Data:</fo:block>
+                                </fo:table-cell>
+                                <fo:table-cell border="solid black 1px" padding="5pt">
+                                    <fo:block><xsl:value-of select="countryData/data"/></fo:block>
+                                </fo:table-cell>
+                            </fo:table-row>
+                            <fo:table-row>
+                                <fo:table-cell border="solid black 1px" padding="5pt">
+                                    <fo:block font-weight="bold">Date:</fo:block>
+                                </fo:table-cell>
+                                <fo:table-cell border="solid black 1px" padding="5pt">
+                                    <fo:block><xsl:value-of select="countryData/date"/></fo:block>
+                                </fo:table-cell>
+                            </fo:table-row>
+                            <fo:table-row>
+                                <fo:table-cell border="solid black 1px" padding="5pt">
+                                    <fo:block font-weight="bold">Country:</fo:block>
+                                </fo:table-cell>
+                                <fo:table-cell border="solid black 1px" padding="5pt">
+                                    <fo:block><xsl:value-of select="countryData/country"/></fo:block>
+                                </fo:table-cell>
+                            </fo:table-row>
+                            <fo:table-row>
+                                <fo:table-cell border="solid black 1px" padding="5pt">
+                                    <fo:block font-weight="bold">Capital City:</fo:block>
+                                </fo:table-cell>
+                                <fo:table-cell border="solid black 1px" padding="5pt">
+                                    <fo:block><xsl:value-of select="countryData/capitalCity"/></fo:block>
+                                </fo:table-cell>
+                            </fo:table-row>
                         </fo:table-body>
                     </fo:table>
                 </fo:flow>
             </fo:page-sequence>
         </fo:root>
     </xsl:template>
-
-    <xsl:template match="countryData">
-        <fo:table-row>
-            <fo:table-cell>
-                <fo:block><xsl:value-of select="/application"/></fo:block>
-            </fo:table-cell>
-            <fo:table-cell>
-                <fo:block><xsl:value-of select="/data"/></fo:block>
-            </fo:table-cell>
-            <fo:table-cell>
-                <fo:block><xsl:value-of select="/date"/></fo:block>
-            </fo:table-cell>
-            <fo:table-cell>
-                <fo:block><xsl:value-of select="/country"/></fo:block>
-            </fo:table-cell>
-            <fo:table-cell>
-                <fo:block><xsl:value-of select="/capitalCity"/></fo:block>
-            </fo:table-cell>
-        </fo:table-row>
-    </xsl:template>
-
 </xsl:stylesheet>

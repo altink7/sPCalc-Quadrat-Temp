@@ -24,7 +24,7 @@ public class XmlToPdfConverter {
         TransformerFactory transformerFactory = TransformerFactory.newInstance();
         Source xslt = new StreamSource(new File("slm/src/main/java/slm/slm/document/config/stylesheet.xsl"));
         Transformer transformer = transformerFactory.newTransformer(xslt);
-        Source xml = new StreamSource(new File("slm/src/main/java/slm/slm/document/files/testdata.xml"));
+        Source xml = new StreamSource(new File("slm/src/main/java/slm/slm/document/config/data.xml"));
         OutputStream foStream = new FileOutputStream("output.fo");
         Result foResult = new StreamResult(new File("output.fo"));
 
@@ -32,7 +32,7 @@ public class XmlToPdfConverter {
         foStream.close();
 
         // Set up a Fop object to generate the PDF file
-        OutputStream pdfStream = new FileOutputStream(new File("output.pdf"));
+        OutputStream pdfStream = new FileOutputStream("output.pdf");
         Fop fop = fopFactory.newFop(MimeConstants.MIME_PDF, pdfStream);
 
         // Convert the XSL-FO file to PDF using Apache FOP

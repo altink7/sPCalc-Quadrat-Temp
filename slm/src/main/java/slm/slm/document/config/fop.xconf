@@ -3,7 +3,7 @@
     <renderers>
         <renderer mime="application/pdf">
             <fonts>
-                <directory>/usr/share/fonts/truetype</directory>
+                <directory>/usr/share/fonts/true-type</directory>
                 <auto-detect/>
             </fonts>
         </renderer>
