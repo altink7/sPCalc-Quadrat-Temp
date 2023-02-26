@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <fop version="1.0">
+    <base>slm/src/main/java/slm/slm/document/config/</base>
     <renderers>
         <renderer mime="application/pdf">
             <fonts>
-                <directory>/usr/share/fonts/true-type</directory>
+                <directory>/usr/share/fonts/truetype</directory>
                 <auto-detect/>
             </fonts>
         </renderer>

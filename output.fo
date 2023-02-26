@@ -32,7 +32,7 @@
 <fo:block font-weight="bold">Date:</fo:block>
 </fo:table-cell>
 <fo:table-cell padding="5pt" border="solid black 1px">
-<fo:block/>
+<fo:block>26-02-2023 17:24:00</fo:block>
 </fo:table-cell>
 </fo:table-row>
 <fo:table-row>

@@ -11,6 +11,7 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.sax.SAXResult;
 import javax.xml.transform.stream.StreamResult;
 import javax.xml.transform.stream.StreamSource;
+import java.awt.*;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.OutputStream;
@@ -40,6 +41,15 @@ public class XmlToPdfConverter {
         Result pdfResult = new SAXResult(fop.getDefaultHandler());
         transformer.transform(fo, pdfResult);
 
+        OutputStream filledPdf = new FileOutputStream("filled.pdf");
+        transformer = transformerFactory.newTransformer();
+        Fop filledFop = fopFactory.newFop(MimeConstants.MIME_PDF, pdfStream);
+        pdfResult = new SAXResult(filledFop.getDefaultHandler());
+        transformer.transform(fo, pdfResult);
         pdfStream.close();
+
+        //show the pdf
+        Desktop.getDesktop().open(new File("output.pdf"));
+
     }
 }

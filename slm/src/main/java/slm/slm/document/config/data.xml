@@ -3,7 +3,7 @@
 <countryData>
     <application>My Application</application>
     <data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">Some data</data>
-    <date/>
+    <date>26-02-2023 17:24:00</date>
     <country>Canada</country>
     <capitalCity>Ottawa</capitalCity>
 </countryData>
