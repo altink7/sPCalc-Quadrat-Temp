@@ -22,7 +22,7 @@
 <fo:block font-weight="bold">Application:</fo:block>
 </fo:table-cell>
 <fo:table-cell padding="10pt" font-size="20pt" border="solid black 1px">
-<fo:block>My Application</fo:block>
+<fo:block>Capital-Rest</fo:block>
 </fo:table-cell>
 </fo:table-row>
 <fo:table-row>
@@ -30,7 +30,7 @@
 <fo:block font-weight="bold">Data:</fo:block>
 </fo:table-cell>
 <fo:table-cell padding="10pt" font-size="20pt" border="solid black 1px">
-<fo:block>Some data</fo:block>
+<fo:block>Capital-Country</fo:block>
 </fo:table-cell>
 </fo:table-row>
 <fo:table-row>
@@ -38,7 +38,7 @@
 <fo:block font-weight="bold">Date:</fo:block>
 </fo:table-cell>
 <fo:table-cell padding="10pt" font-size="20pt" border="solid black 1px">
-<fo:block>26-02-2023 17:24:00</fo:block>
+<fo:block/>
 </fo:table-cell>
 </fo:table-row>
 <fo:table-row>
@@ -46,7 +46,7 @@
 <fo:block font-weight="bold">Country:</fo:block>
 </fo:table-cell>
 <fo:table-cell padding="10pt" font-size="20pt" border="solid black 1px">
-<fo:block>Canada</fo:block>
+<fo:block>Germany</fo:block>
 </fo:table-cell>
 </fo:table-row>
 <fo:table-row>
@@ -54,7 +54,7 @@
 <fo:block font-weight="bold">Capital City:</fo:block>
 </fo:table-cell>
 <fo:table-cell padding="10pt" font-size="20pt" border="solid black 1px">
-<fo:block>Ottawa</fo:block>
+<fo:block>Berlin</fo:block>
 </fo:table-cell>
 </fo:table-row>
 </fo:table-body>
